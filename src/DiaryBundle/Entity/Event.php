@@ -119,4 +119,8 @@ class Event
     {
         return $this->date;
     }
+    
+    public function __toString(){
+        return $this->name;
+    }
 }

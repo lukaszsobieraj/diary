@@ -127,6 +127,49 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // diary_homepage
+        if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'diary_homepage')), array (  '_controller' => 'DiaryBundle\\Controller\\DefaultController::indexAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/person')) {
+            // person
+            if ($pathinfo === '/person/index') {
+                return array (  '_controller' => 'DiaryBundle\\Controller\\PersonController::indexAction',  '_route' => 'person',);
+            }
+
+            // person_show
+            if (0 === strpos($pathinfo, '/person/show') && preg_match('#^/person/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'person_show')), array (  '_controller' => 'DiaryBundle\\Controller\\PersonController::showAction',));
+            }
+
+            // person_edit
+            if (0 === strpos($pathinfo, '/person/edit') && preg_match('#^/person/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'person_edit')), array (  '_controller' => 'DiaryBundle\\Controller\\PersonController::editAction',));
+            }
+
+            // person_update
+            if (0 === strpos($pathinfo, '/person/update') && preg_match('#^/person/update/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'person_update')), array (  '_controller' => 'DiaryBundle\\Controller\\PersonController::updateAction',));
+            }
+
+            // person_delete
+            if (0 === strpos($pathinfo, '/person/delete') && preg_match('#^/person/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'person_delete')), array (  '_controller' => 'DiaryBundle\\Controller\\PersonController::deleteAction',));
+            }
+
+            // person_new
+            if ($pathinfo === '/person/new') {
+                return array (  '_controller' => 'DiaryBundle\\Controller\\PersonController::newAction',  '_route' => 'person_new',);
+            }
+
+            // person_create
+            if ($pathinfo === '/person/create') {
+                return array (  '_controller' => 'DiaryBundle\\Controller\\PersonController::createAction',  '_route' => 'person_create',);
+            }
+
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

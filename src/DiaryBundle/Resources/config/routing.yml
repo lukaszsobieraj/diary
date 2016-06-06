@@ -1,3 +1,32 @@
 diary_homepage:
     path:     /hello/{name}
     defaults: { _controller: DiaryBundle:Default:index }
+
+
+person:
+    path:     /person/index
+    defaults: { _controller: DiaryBundle:Person:index }
+    
+person_show:
+    path:     /person/show/{id}
+    defaults: { _controller: DiaryBundle:Person:show }
+    
+person_edit:
+    path:     /person/edit/{id}
+    defaults: { _controller: DiaryBundle:Person:edit }
+    
+person_update:
+    path:     /person/update/{id}
+    defaults: { _controller: DiaryBundle:Person:update }
+    
+person_delete:
+    path:     /person/delete/{id}
+    defaults: { _controller: DiaryBundle:Person:delete }
+    
+person_new:
+    path:     /person/new
+    defaults: { _controller: DiaryBundle:Person:new }
+    
+person_create:
+    path:     /person/create
+    defaults: { _controller: DiaryBundle:Person:create }
