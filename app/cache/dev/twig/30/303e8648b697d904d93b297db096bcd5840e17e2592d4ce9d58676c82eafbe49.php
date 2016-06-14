@@ -8,55 +8,53 @@ class __TwigTemplate_469a512c80b4db60bc99d7ecb7dc1a2585f0823019e849641ae54dbadcc
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("::base.html.twig", "DiaryBundle:Person:new.html.twig", 1);
+        $this->parent = $this->loadTemplate("DiaryBundle:Default:index.html.twig", "DiaryBundle:Person:new.html.twig", 1);
         $this->blocks = array(
-            'body' => array($this, 'block_body'),
+            'content' => array($this, 'block_content'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "::base.html.twig";
+        return "DiaryBundle:Default:index.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_89c1a24443467d8bc0474d9b3927db046221e527a83a26c905f13bb90eba1e85 = $this->env->getExtension("native_profiler");
-        $__internal_89c1a24443467d8bc0474d9b3927db046221e527a83a26c905f13bb90eba1e85->enter($__internal_89c1a24443467d8bc0474d9b3927db046221e527a83a26c905f13bb90eba1e85_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiaryBundle:Person:new.html.twig"));
+        $__internal_dd4ee71e3ff560a905ca07f2054dcadcfca6b107e6c875c8fc95e3b95fa4fa06 = $this->env->getExtension("native_profiler");
+        $__internal_dd4ee71e3ff560a905ca07f2054dcadcfca6b107e6c875c8fc95e3b95fa4fa06->enter($__internal_dd4ee71e3ff560a905ca07f2054dcadcfca6b107e6c875c8fc95e3b95fa4fa06_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiaryBundle:Person:new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_89c1a24443467d8bc0474d9b3927db046221e527a83a26c905f13bb90eba1e85->leave($__internal_89c1a24443467d8bc0474d9b3927db046221e527a83a26c905f13bb90eba1e85_prof);
+        $__internal_dd4ee71e3ff560a905ca07f2054dcadcfca6b107e6c875c8fc95e3b95fa4fa06->leave($__internal_dd4ee71e3ff560a905ca07f2054dcadcfca6b107e6c875c8fc95e3b95fa4fa06_prof);
 
     }
 
-    // line 3
-    public function block_body($context, array $blocks = array())
+    // line 2
+    public function block_content($context, array $blocks = array())
     {
-        $__internal_c805c69901f41b88803596a51a55f332bc66a63e267d7dfd232201f9117ac3b6 = $this->env->getExtension("native_profiler");
-        $__internal_c805c69901f41b88803596a51a55f332bc66a63e267d7dfd232201f9117ac3b6->enter($__internal_c805c69901f41b88803596a51a55f332bc66a63e267d7dfd232201f9117ac3b6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_487ed4addb887bd9aa27fbea33b135e25f3efb61c2a97d0af6b4794cbb6651e9 = $this->env->getExtension("native_profiler");
+        $__internal_487ed4addb887bd9aa27fbea33b135e25f3efb61c2a97d0af6b4794cbb6651e9->enter($__internal_487ed4addb887bd9aa27fbea33b135e25f3efb61c2a97d0af6b4794cbb6651e9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        // line 4
-        echo "<h1>Person creation</h1>
+        // line 3
+        echo "     <h1>Person<br/><small>Create</small></h1>
 
     ";
-        // line 6
+        // line 5
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form');
         echo "
 
-        <ul class=\"record_actions\">
-    <li>
+    <div>
         <a href=\"";
-        // line 10
+        // line 8
         echo $this->env->getExtension('routing')->getPath("person");
-        echo "\">
+        echo "\" class=\"btn btn-default\">
             Back to the list
         </a>
-    </li>
-</ul>
+    </div>
 ";
         
-        $__internal_c805c69901f41b88803596a51a55f332bc66a63e267d7dfd232201f9117ac3b6->leave($__internal_c805c69901f41b88803596a51a55f332bc66a63e267d7dfd232201f9117ac3b6_prof);
+        $__internal_487ed4addb887bd9aa27fbea33b135e25f3efb61c2a97d0af6b4794cbb6651e9->leave($__internal_487ed4addb887bd9aa27fbea33b135e25f3efb61c2a97d0af6b4794cbb6651e9_prof);
 
     }
 
@@ -72,22 +70,19 @@ class __TwigTemplate_469a512c80b4db60bc99d7ecb7dc1a2585f0823019e849641ae54dbadcc
 
     public function getDebugInfo()
     {
-        return array (  51 => 10,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  50 => 8,  44 => 5,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
-/* {% extends '::base.html.twig' %}*/
-/* */
-/* {% block body -%}*/
-/*     <h1>Person creation</h1>*/
+/* {% extends 'DiaryBundle:Default:index.html.twig' %}*/
+/* {% block content %}*/
+/*      <h1>Person<br/><small>Create</small></h1>*/
 /* */
 /*     {{ form(form) }}*/
 /* */
-/*         <ul class="record_actions">*/
-/*     <li>*/
-/*         <a href="{{ path('person') }}">*/
+/*     <div>*/
+/*         <a href="{{ path('person') }}" class="btn btn-default">*/
 /*             Back to the list*/
 /*         </a>*/
-/*     </li>*/
-/* </ul>*/
+/*     </div>*/
 /* {% endblock %}*/
 /* */

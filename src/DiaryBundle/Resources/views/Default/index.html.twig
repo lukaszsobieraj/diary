@@ -1,0 +1,21 @@
+{% block header %}
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{asset('bundles/diary/css/bootstrap.min.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{asset('bundles/diary/css/main.css')}}"
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+        </script>
+    </head>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}
+
+
+{%block javascripts %}
+    <script type="text/javascript" src="{{asset('bundles/diary/js/bootstrap.min.js')}}"></script>
+{% endblock %}
