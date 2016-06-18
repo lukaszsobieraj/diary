@@ -4,7 +4,7 @@
 {% block content %}
     <h1>Person<br/><small>Show</small></h1>
 
-    <table class="record_properties">
+    <table class="record_properties table">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -13,6 +13,10 @@
             <tr>
                 <th>Name</th>
                 <td>{{ entity.name }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -27,9 +31,9 @@
         </a>
     </div>
     <div>
-        <a href="{{ path('person_edit', { 'id': entity.id }) }}" class="btn btn-default">
+        <a href="{{ path('person_edit', { 'id': entity.id }) }}" class="btn btn-primary">
             Edit
         </a>
     </div>
     <div>{{ form(delete_form) }}</div>
-    {% endblock %}
+{% endblock %}

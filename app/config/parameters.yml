@@ -6,7 +6,7 @@ parameters:
     database_user: root
     database_password: null
     mailer_transport: smtp
-    mailer_host: 127.0.0.1
-    mailer_user: null
-    mailer_password: null
+    mailer_host: smtp.aol.com
+    mailer_user: lukaszsobieraj@aim.com
+    mailer_password: password
     secret: 677ac5d2dbca9b7d09e629362bec200fa61b47cb

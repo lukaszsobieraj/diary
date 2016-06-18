@@ -21,25 +21,25 @@ class __TwigTemplate_e4a5d15709e01381dd87e19e7b7b384d87b683f507934edaec4038e64f6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c2ca6aa7dc6ca8e1c6346c58cbf098bcc0e5c3cd941c5b7617e4f2c7dfa04d5b = $this->env->getExtension("native_profiler");
-        $__internal_c2ca6aa7dc6ca8e1c6346c58cbf098bcc0e5c3cd941c5b7617e4f2c7dfa04d5b->enter($__internal_c2ca6aa7dc6ca8e1c6346c58cbf098bcc0e5c3cd941c5b7617e4f2c7dfa04d5b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiaryBundle:Person:show.html.twig"));
+        $__internal_8eb1017a6ede575a46df67f91a77fb20a1156c0a87ad766ec96a2cb1f74543e5 = $this->env->getExtension("native_profiler");
+        $__internal_8eb1017a6ede575a46df67f91a77fb20a1156c0a87ad766ec96a2cb1f74543e5->enter($__internal_8eb1017a6ede575a46df67f91a77fb20a1156c0a87ad766ec96a2cb1f74543e5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiaryBundle:Person:show.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c2ca6aa7dc6ca8e1c6346c58cbf098bcc0e5c3cd941c5b7617e4f2c7dfa04d5b->leave($__internal_c2ca6aa7dc6ca8e1c6346c58cbf098bcc0e5c3cd941c5b7617e4f2c7dfa04d5b_prof);
+        $__internal_8eb1017a6ede575a46df67f91a77fb20a1156c0a87ad766ec96a2cb1f74543e5->leave($__internal_8eb1017a6ede575a46df67f91a77fb20a1156c0a87ad766ec96a2cb1f74543e5_prof);
 
     }
 
     // line 4
     public function block_content($context, array $blocks = array())
     {
-        $__internal_7be57f477aad85786ed867230a0cfe1b71e0d0a7a6b10aeb7fd6f60a9644ee7a = $this->env->getExtension("native_profiler");
-        $__internal_7be57f477aad85786ed867230a0cfe1b71e0d0a7a6b10aeb7fd6f60a9644ee7a->enter($__internal_7be57f477aad85786ed867230a0cfe1b71e0d0a7a6b10aeb7fd6f60a9644ee7a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_e5763d919cfbe766767ca6e8111e95ecc87ab3ecba905ec468eee9f03bd49b0e = $this->env->getExtension("native_profiler");
+        $__internal_e5763d919cfbe766767ca6e8111e95ecc87ab3ecba905ec468eee9f03bd49b0e->enter($__internal_e5763d919cfbe766767ca6e8111e95ecc87ab3ecba905ec468eee9f03bd49b0e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 5
         echo "    <h1>Person<br/><small>Show</small></h1>
 
-    <table class=\"record_properties\">
+    <table class=\"record_properties table\">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -56,9 +56,16 @@ class __TwigTemplate_e4a5d15709e01381dd87e19e7b7b384d87b683f507934edaec4038e64f6
         echo "</td>
             </tr>
             <tr>
-                <th>Description</th>
+                <th>Email</th>
                 <td>";
         // line 19
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "email", array()), "html", null, true);
+        echo "</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>";
+        // line 23
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "description", array()), "html", null, true);
         echo "</td>
             </tr>
@@ -67,7 +74,7 @@ class __TwigTemplate_e4a5d15709e01381dd87e19e7b7b384d87b683f507934edaec4038e64f6
 
     <div>
         <a href=\"";
-        // line 25
+        // line 29
         echo $this->env->getExtension('routing')->getPath("person");
         echo "\" class=\"btn btn-default\">
             Back to the list
@@ -75,19 +82,19 @@ class __TwigTemplate_e4a5d15709e01381dd87e19e7b7b384d87b683f507934edaec4038e64f6
     </div>
     <div>
         <a href=\"";
-        // line 30
+        // line 34
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("person_edit", array("id" => $this->getAttribute((isset($context["entity"]) ? $context["entity"] : $this->getContext($context, "entity")), "id", array()))), "html", null, true);
-        echo "\" class=\"btn btn-default\">
+        echo "\" class=\"btn btn-primary\">
             Edit
         </a>
     </div>
     <div>";
-        // line 34
+        // line 38
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</div>
-    ";
+";
         
-        $__internal_7be57f477aad85786ed867230a0cfe1b71e0d0a7a6b10aeb7fd6f60a9644ee7a->leave($__internal_7be57f477aad85786ed867230a0cfe1b71e0d0a7a6b10aeb7fd6f60a9644ee7a_prof);
+        $__internal_e5763d919cfbe766767ca6e8111e95ecc87ab3ecba905ec468eee9f03bd49b0e->leave($__internal_e5763d919cfbe766767ca6e8111e95ecc87ab3ecba905ec468eee9f03bd49b0e_prof);
 
     }
 
@@ -103,7 +110,7 @@ class __TwigTemplate_e4a5d15709e01381dd87e19e7b7b384d87b683f507934edaec4038e64f6
 
     public function getDebugInfo()
     {
-        return array (  86 => 34,  79 => 30,  71 => 25,  62 => 19,  55 => 15,  48 => 11,  40 => 5,  34 => 4,  11 => 1,);
+        return array (  93 => 38,  86 => 34,  78 => 29,  69 => 23,  62 => 19,  55 => 15,  48 => 11,  40 => 5,  34 => 4,  11 => 1,);
     }
 }
 /* {% extends 'DiaryBundle:Default:index.html.twig' %}*/
@@ -112,7 +119,7 @@ class __TwigTemplate_e4a5d15709e01381dd87e19e7b7b384d87b683f507934edaec4038e64f6
 /* {% block content %}*/
 /*     <h1>Person<br/><small>Show</small></h1>*/
 /* */
-/*     <table class="record_properties">*/
+/*     <table class="record_properties table">*/
 /*         <tbody>*/
 /*             <tr>*/
 /*                 <th>Id</th>*/
@@ -121,6 +128,10 @@ class __TwigTemplate_e4a5d15709e01381dd87e19e7b7b384d87b683f507934edaec4038e64f6
 /*             <tr>*/
 /*                 <th>Name</th>*/
 /*                 <td>{{ entity.name }}</td>*/
+/*             </tr>*/
+/*             <tr>*/
+/*                 <th>Email</th>*/
+/*                 <td>{{ entity.email }}</td>*/
 /*             </tr>*/
 /*             <tr>*/
 /*                 <th>Description</th>*/
@@ -135,10 +146,10 @@ class __TwigTemplate_e4a5d15709e01381dd87e19e7b7b384d87b683f507934edaec4038e64f6
 /*         </a>*/
 /*     </div>*/
 /*     <div>*/
-/*         <a href="{{ path('person_edit', { 'id': entity.id }) }}" class="btn btn-default">*/
+/*         <a href="{{ path('person_edit', { 'id': entity.id }) }}" class="btn btn-primary">*/
 /*             Edit*/
 /*         </a>*/
 /*     </div>*/
 /*     <div>{{ form(delete_form) }}</div>*/
-/*     {% endblock %}*/
+/* {% endblock %}*/
 /* */

@@ -2,3 +2,16 @@ h2{
     margin-bottom: 40%;
     font-weight: 300;
 }
+
+
+.table-records th{
+    text-align: center;
+}
+
+.table-records td{
+    text-align: center;
+}
+
+.create-button{
+    
+}

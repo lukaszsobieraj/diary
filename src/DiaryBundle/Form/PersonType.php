@@ -19,6 +19,7 @@ class PersonType extends AbstractType
             ->add('name')
             ->add('description')
             ->add('event')
+            ->add('email')
         ;
     }
     

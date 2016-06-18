@@ -170,6 +170,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/diary')) {
+            // diary_redirect
+            if ($pathinfo === '/diary/redirect') {
+                return array (  '_controller' => 'DiaryBundle\\Controller\\PersonController::personRedirectAction',  '_route' => 'diary_redirect',);
+            }
+
+            // diary_send
+            if ($pathinfo === '/diary/send') {
+                return array (  '_controller' => 'DiaryBundle\\Controller\\PersonController::personSendAction',  '_route' => 'diary_send',);
+            }
+
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

@@ -3,12 +3,13 @@
 {% block content %}
     <div class="col-md-2"></div>
     <div class="col-md-5">
-        <span><h1>Person<br/><small>List</small></h1></span>
-        <table class="records_list table-striped">
+        <span><h1>Person Diary<br/><small>List</small></h1></span>
+        <table class="records_list table table-records">
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
+                    <th>Email</th>
                     <th>Description</th>
                     <th>Actions</th>
                 </tr>
@@ -18,15 +19,14 @@
                     <tr>
                         <td><a href="{{ path('person_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                         <td>{{ entity.name }}</td>
+                        <td>{{ entity.email }}</td>
                         <td>{{ entity.description }}</td>
                         <td>
                             <div>
                                 <div>
                                     <a href="{{ path('person_show', { 'id': entity.id }) }}" class="btn btn-default">Show</a>
-                                </div>
-                                <div>
                                     <a href="{{ path('person_edit', { 'id': entity.id }) }}" class="btn btn-default">Edit</a>
-                                </divs>
+                                </div>
                             </div>
                         </td>
                     </tr>
@@ -34,7 +34,7 @@
             </tbody>
         </table>
         <div>
-            <a class="btn btn-default" href="{{ path('person_new') }}">
+            <a class="btn btn-primary create-button" href="{{ path('person_new') }}">
                 Create a new entry
             </a>
         </div>

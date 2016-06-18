@@ -21,45 +21,70 @@ class __TwigTemplate_6fadf7876636f535c18737ca01f366bf389c328c2dce84e912815cf4eae
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_72c6e15b086489ea96f37554e78cc151165a0a5fd936fec0564d35d1c5b4c441 = $this->env->getExtension("native_profiler");
-        $__internal_72c6e15b086489ea96f37554e78cc151165a0a5fd936fec0564d35d1c5b4c441->enter($__internal_72c6e15b086489ea96f37554e78cc151165a0a5fd936fec0564d35d1c5b4c441_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiaryBundle:Person:edit.html.twig"));
+        $__internal_fd0069d5b6de8dbe778ff2b175d13fccaa73bd0bbf4c5a6e63114dcef320bfb5 = $this->env->getExtension("native_profiler");
+        $__internal_fd0069d5b6de8dbe778ff2b175d13fccaa73bd0bbf4c5a6e63114dcef320bfb5->enter($__internal_fd0069d5b6de8dbe778ff2b175d13fccaa73bd0bbf4c5a6e63114dcef320bfb5_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "DiaryBundle:Person:edit.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_72c6e15b086489ea96f37554e78cc151165a0a5fd936fec0564d35d1c5b4c441->leave($__internal_72c6e15b086489ea96f37554e78cc151165a0a5fd936fec0564d35d1c5b4c441_prof);
+        $__internal_fd0069d5b6de8dbe778ff2b175d13fccaa73bd0bbf4c5a6e63114dcef320bfb5->leave($__internal_fd0069d5b6de8dbe778ff2b175d13fccaa73bd0bbf4c5a6e63114dcef320bfb5_prof);
 
     }
 
     // line 3
     public function block_content($context, array $blocks = array())
     {
-        $__internal_4d345ef02144d905a6550f36d32e73fcf5c32359a519a6f5191467479b1fbd8a = $this->env->getExtension("native_profiler");
-        $__internal_4d345ef02144d905a6550f36d32e73fcf5c32359a519a6f5191467479b1fbd8a->enter($__internal_4d345ef02144d905a6550f36d32e73fcf5c32359a519a6f5191467479b1fbd8a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_bf8e21a54b2083e3b77399b34ecd447e7a3fadf9b7deae82a9131ef2e102533d = $this->env->getExtension("native_profiler");
+        $__internal_bf8e21a54b2083e3b77399b34ecd447e7a3fadf9b7deae82a9131ef2e102533d->enter($__internal_bf8e21a54b2083e3b77399b34ecd447e7a3fadf9b7deae82a9131ef2e102533d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 4
-        echo "     <h1>Person<br/><small>Edit</small></h1>
-
-    ";
-        // line 6
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form');
+        echo "    <div class=\"col-md-2\"></div>
+    <div class=\"col-md-5\">
+        <h1>Person<br/><small>Edit</small></h1>
+            ";
+        // line 7
+        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form_start');
         echo "
-
-    <div>
-        <a href=\"";
+        <div class=\"form-group\">Name: 
+            <p>";
         // line 9
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "name", array()), 'widget');
+        echo " </p>
+        </div>
+        <div class=\"form-group\">Description: 
+            <p>";
+        // line 12
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "description", array()), 'widget');
+        echo "</p> 
+        </div> 
+        <div class=\"form-group\">Event: 
+            <p>";
+        // line 15
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "event", array()), 'widget');
+        echo "</p> 
+        </div> 
+        <div class=\"form-group\">Event: 
+            <p>";
+        // line 18
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), "email", array()), 'widget');
+        echo "</p> 
+        </div> 
+        <div>
+            <a href=\"";
+        // line 21
         echo $this->env->getExtension('routing')->getPath("person");
         echo "\" class=\"btn btn-default\">
-            Back to the list
-        </a>
-    </div>
-    <div>";
-        // line 13
+                Back to the list
+            </a>
+        </div>
+        <div>";
+        // line 25
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form');
         echo "</div>
+    </div>
 
 ";
         
-        $__internal_4d345ef02144d905a6550f36d32e73fcf5c32359a519a6f5191467479b1fbd8a->leave($__internal_4d345ef02144d905a6550f36d32e73fcf5c32359a519a6f5191467479b1fbd8a_prof);
+        $__internal_bf8e21a54b2083e3b77399b34ecd447e7a3fadf9b7deae82a9131ef2e102533d->leave($__internal_bf8e21a54b2083e3b77399b34ecd447e7a3fadf9b7deae82a9131ef2e102533d_prof);
 
     }
 
@@ -75,22 +100,35 @@ class __TwigTemplate_6fadf7876636f535c18737ca01f366bf389c328c2dce84e912815cf4eae
 
     public function getDebugInfo()
     {
-        return array (  57 => 13,  50 => 9,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  81 => 25,  74 => 21,  68 => 18,  62 => 15,  56 => 12,  50 => 9,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
     }
 }
 /* {% extends 'DiaryBundle:Default:index.html.twig' %}*/
 /* */
 /* {% block content %}*/
-/*      <h1>Person<br/><small>Edit</small></h1>*/
-/* */
-/*     {{ form(edit_form) }}*/
-/* */
-/*     <div>*/
-/*         <a href="{{ path('person') }}" class="btn btn-default">*/
-/*             Back to the list*/
-/*         </a>*/
+/*     <div class="col-md-2"></div>*/
+/*     <div class="col-md-5">*/
+/*         <h1>Person<br/><small>Edit</small></h1>*/
+/*             {{ form_start(edit_form) }}*/
+/*         <div class="form-group">Name: */
+/*             <p>{{ form_widget(edit_form.name) }} </p>*/
+/*         </div>*/
+/*         <div class="form-group">Description: */
+/*             <p>{{ form_widget(edit_form.description) }}</p> */
+/*         </div> */
+/*         <div class="form-group">Event: */
+/*             <p>{{ form_widget(edit_form.event) }}</p> */
+/*         </div> */
+/*         <div class="form-group">Event: */
+/*             <p>{{ form_widget(edit_form.email) }}</p> */
+/*         </div> */
+/*         <div>*/
+/*             <a href="{{ path('person') }}" class="btn btn-default">*/
+/*                 Back to the list*/
+/*             </a>*/
+/*         </div>*/
+/*         <div>{{ form(delete_form) }}</div>*/
 /*     </div>*/
-/*     <div>{{ form(delete_form) }}</div>*/
 /* */
 /* {% endblock %}*/
 /* */

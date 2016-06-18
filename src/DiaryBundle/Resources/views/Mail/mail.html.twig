@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <form action="{{ path('diary_send') }}" method="POST">
+            <h2>Email message create: </h2>
+            <div>
+                <h2>Subject: </h2>
+                <input type="text" name="subject"/>
+            </div>
+            <div>
+                <h2>Email: </h2>
+                <input type="email" name="email"/>
+            </div>
+            <div>
+                <h2>Message: </h2>
+                <textarea name="message"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Send" />
+            </div>
+        </form>
+    </body>
+</html>

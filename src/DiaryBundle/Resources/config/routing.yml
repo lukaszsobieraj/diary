@@ -30,3 +30,12 @@ person_new:
 person_create:
     path:     /person/create
     defaults: { _controller: DiaryBundle:Person:create }
+
+
+diary_redirect:
+    path:     /diary/redirect
+    defaults: { _controller: DiaryBundle:Person:personRedirect }
+
+diary_send:
+    path:     /diary/send
+    defaults: { _controller: DiaryBundle:Person:personSend }

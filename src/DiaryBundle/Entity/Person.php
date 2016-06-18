@@ -10,8 +10,8 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="DiaryBundle\Entity\PersonRepository")
  */
-class Person
-{
+class Person {
+
     /**
      * @var integer
      *
@@ -31,6 +31,13 @@ class Person
     /**
      * @var string
      *
+     * @ORM\Column(name="email", type="string", length=255)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="description", type="string", length=255)
      */
     private $description;
@@ -40,14 +47,12 @@ class Person
      */
     private $event;
 
-
     /**
      * Get id
      *
      * @return integer 
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -57,8 +62,7 @@ class Person
      * @param string $name
      * @return Person
      */
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
 
         return $this;
@@ -69,9 +73,29 @@ class Person
      *
      * @return string 
      */
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return Person
+     */
+    public function setEmail($email) {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string 
+     */
+    public function getEmail() {
+        return $this->email;
     }
 
     /**
@@ -80,8 +104,7 @@ class Person
      * @param string $description
      * @return Person
      */
-    public function setDescription($description)
-    {
+    public function setDescription($description) {
         $this->description = $description;
 
         return $this;
@@ -92,8 +115,7 @@ class Person
      *
      * @return string 
      */
-    public function getDescription()
-    {
+    public function getDescription() {
         return $this->description;
     }
 
@@ -103,8 +125,7 @@ class Person
      * @param  $event
      * @return Person
      */
-    public function setEvent($event)
-    {
+    public function setEvent($event) {
         $this->event = $event;
 
         return $this;
@@ -115,8 +136,8 @@ class Person
      *
      * @return  
      */
-    public function getEvent()
-    {
+    public function getEvent() {
         return $this->event;
     }
+
 }

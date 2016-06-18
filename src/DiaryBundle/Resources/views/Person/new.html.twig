@@ -1,12 +1,26 @@
 {% extends 'DiaryBundle:Default:index.html.twig' %}
 {% block content %}
-     <h1>Person<br/><small>Create</small></h1>
-
-    {{ form(form) }}
-
-    <div>
-        <a href="{{ path('person') }}" class="btn btn-default">
-            Back to the list
-        </a>
+    <div class="col-md-2"></div>
+    <div class="col-md-5">
+        <h1>Diary<br/><small>Create</small></h1>
+            {{ form_start(form) }}
+        <div class="form-group">Name: 
+            <p name="name">{{ form_widget(form.name) }} </p>
+        </div>
+        <div class="form-group">Description: 
+            <p name="description">{{ form_widget(form.description) }}</p> 
+        </div> 
+        <div class="form-group">Email: 
+            <p name="email">{{ form_widget(form.email) }}</p> 
+        </div> 
+        <div class="form-group">Event: 
+            <p name="event">{{ form_widget(form.event) }}</p> 
+        </div> 
+        <div>
+            <a href="{{ path('person') }}" class="btn btn-default">
+                Back to the list
+            </a>
+        </div>
+        {{ form_end(form) }}
     </div>
 {% endblock %}
