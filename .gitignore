@@ -5,4 +5,4 @@
 /.gitignore
 /app/config.yml
 /app/parameters.yml
-/DiaryBundle/Controller/PersonController.php
+/DiaryBundle/Controller/PersonController.php 
